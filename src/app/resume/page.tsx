@@ -84,7 +84,7 @@ export default function ResumePage() {
 					</div>
 				</div>
 				<div className="w-3">
-					<div className="fixed top-6/12 right-3">↓</div>
+					<div className="relative top-4/12 right-0">↓</div>
 				</div>
 			</div>
 			<div>
