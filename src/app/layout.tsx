@@ -1,8 +1,8 @@
 import "~/styles/globals.css";
 
 import type { Metadata } from "next";
-import Navigation from "./components/Navigation";
 import MouseBackground from "./components/MouseBackground";
+import Navigation from "./components/Navigation";
 
 export const metadata: Metadata = {
 	title: "MAWS Architecture",
