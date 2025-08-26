@@ -13,7 +13,7 @@ export default function ExperiencePage() {
 	return (
 		<main>
 			<div className="space-y-4">
-				<p className="max-w-3xl">
+				<p className="max-w-[540px]">
 					Amaranta Morton has contributed to projects at different firms,
 					providing design and architectural support.
 				</p>

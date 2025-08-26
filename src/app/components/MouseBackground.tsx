@@ -9,6 +9,8 @@ const colors = [
 	"#fff115", // Amarillo
 	"#ffb6c1", // Rosa claro
 	"#ff002a", // Rojo
+	"#ff8c0f", // Naranja
+	"#a940c2", // Púrpura
 ];
 
 // Calculate luminance of a color to determine if text should be black or white

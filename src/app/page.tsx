@@ -8,7 +8,7 @@ export default function AboutPage() {
 
 	return (
 		<>
-			<main>
+			<main className="max-w-[540px]">
 				<div className="grid grid-cols-1 items-start gap-1">
 					<div className="">
 						<p className="mb-4">
@@ -38,7 +38,7 @@ export default function AboutPage() {
 								isExpanded ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
 							}`}
 						>
-							<div className="space-y-6">
+							<div className="space-y-4">
 								<p>
 									Amaranta holds a Bachelor's of Architecture from the Southern
 									California Institute of Architecture. Her extensive background
