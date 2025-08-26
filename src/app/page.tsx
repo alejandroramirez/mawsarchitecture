@@ -1,35 +1,75 @@
-import Link from "next/link";
+"use client";
 
-export default function HomePage() {
+import Image from "next/image";
+import { useState } from "react";
+
+export default function AboutPage() {
+	const [isExpanded, setIsExpanded] = useState(false);
+
 	return (
-		<main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white">
-			<div className="container flex flex-col items-center justify-center gap-12 px-4 py-16">
-				<h1 className="font-extrabold text-5xl text-white tracking-tight sm:text-[5rem]">
-					Create <span className="text-[hsl(280,100%,70%)]">T3</span> App
-				</h1>
-				<div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8">
-					<Link
-						className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 text-white hover:bg-white/20"
-						href="https://create.t3.gg/en/usage/first-steps"
-						target="_blank"
+		<main>
+			<div className="grid max-w-2xl grid-cols-1 items-start gap-1">
+				<div className="">
+					<p className="mb-4">
+						A licensed architect in California, Amaranta Morton is the founder
+						of MAWs Architecture, established in 2024. Based in Orange County,
+						her firm offers a full spectrum of architectural services tailored
+						to meet your unique needs, from conceptualization to construction
+						documentation and administration. Additionally, her firm provides
+						design development and permitting assistance. With over 17 years of
+						experience across diverse project typologies, she excels in guiding
+						projects from initial design phases through to completion, ensuring
+						excellence in every client engagement.
+					</p>
+
+					{!isExpanded && (
+						<button
+							type="button"
+							onClick={() => setIsExpanded(true)}
+							className="cursor-pointer transition-opacity hover:opacity-60"
+						>
+							→ Read more
+						</button>
+					)}
+
+					<div
+						className={`overflow-hidden transition-all duration-500 ease-in-out ${
+							isExpanded ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+						}`}
 					>
-						<h3 className="font-bold text-2xl">First Steps →</h3>
-						<div className="text-lg">
-							Just the basics - Everything you need to know to set up your
-							database and authentication.
+						<div className="space-y-6">
+							<p>
+								Amaranta holds a Bachelor's of Architecture from the Southern
+								California Institute of Architecture. Her extensive background
+								includes commercial, civic, educational, institutional, and
+								residential projects. On every project, she has played a pivotal
+								role from early planning stages through final construction,
+								leveraging her skills in communication, organization,
+								interdisciplinary collaboration, and Building Information
+								Modeling (BIM) to lead project teams through all project phases.
+							</p>
+
+							<p>
+								Before founding MAWs Architecture, Amaranta honed her expertise
+								at renowned firms such as HELEO Architecture & Design in San
+								Diego, LPA Design Studios in Irvine, DLR Group in Los Angeles,
+								SPF Architects, and Morphosis Architects in Culver City.
+							</p>
 						</div>
-					</Link>
-					<Link
-						className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 text-white hover:bg-white/20"
-						href="https://create.t3.gg/en/introduction"
-						target="_blank"
-					>
-						<h3 className="font-bold text-2xl">Documentation →</h3>
-						<div className="text-lg">
-							Learn more about Create T3 App, the libraries it uses, and how to
-							deploy it.
-						</div>
-					</Link>
+					</div>
+				</div>
+
+				<div className="flex">
+					<div className="w-full">
+						<Image
+							src="/architect-profile.png"
+							alt="Amaranta Morton"
+							className="h-auto w-full"
+							width={1331}
+							height={887}
+							priority
+						/>
+					</div>
 				</div>
 			</div>
 		</main>

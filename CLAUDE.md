@@ -18,7 +18,7 @@ This is a Next.js project created with the T3 Stack (`create-t3-app`), which pro
 - `pnpm check:unsafe` - Run Biome with unsafe automatic fixes
 
 ## Package Manager
-
+ 
 This project uses `pnpm` as the package manager. Always use `pnpm` commands instead of `npm` or `yarn`.
 
 ## Code Quality

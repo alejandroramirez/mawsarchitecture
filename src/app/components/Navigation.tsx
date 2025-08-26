@@ -1,0 +1,41 @@
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import PDTClock from "./PDTClock";
+
+export default function Navigation() {
+	const pathname = usePathname();
+
+	const navItems = [
+		{ href: "/", label: "About" },
+		{ href: "/experience", label: "Experience" },
+		{ href: "/resume", label: "Résumé" },
+		{ href: "/contact", label: "Contact" },
+	];
+
+	return (
+		<nav className="mb-6">
+			<div className="flex justify-between items-center mb-4">
+				<h1 className="font-normal">
+					MAWS Architecture
+				</h1>
+				<PDTClock />
+			</div>
+			<div className="flex gap-12">
+				{navItems.map((item) => (
+					<Link
+						key={item.href}
+						href={item.href}
+						className={pathname === item.href
+							? "opacity-100"
+							: "opacity-60 hover:opacity-80"
+						}
+					>
+						{item.label}
+					</Link>
+				))}
+			</div>
+		</nav>
+	);
+}
