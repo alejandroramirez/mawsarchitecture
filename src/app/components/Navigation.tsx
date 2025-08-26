@@ -17,7 +17,9 @@ export default function Navigation() {
 	return (
 		<nav className="mb-6">
 			<div className="mb-4 flex items-center justify-between">
-				<h1 className="font-normal">MAWS Architecture</h1>
+				<h1 className="font-normal">
+					<Link href="/">MAWS Architecture</Link>
+				</h1>
 				<PDTClock />
 			</div>
 			<div className="flex gap-6">
