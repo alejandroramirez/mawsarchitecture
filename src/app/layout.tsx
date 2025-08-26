@@ -20,7 +20,7 @@ export default function RootLayout({
 				<MouseBackground />
 				<div className="p-6">
 					<Navigation />
-					<div className="max-w-4/12">{children}</div>
+					<div className="max-w-[540px]">{children}</div>
 				</div>
 			</body>
 		</html>

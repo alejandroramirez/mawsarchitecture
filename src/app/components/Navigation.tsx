@@ -20,7 +20,7 @@ export default function Navigation() {
 				<h1 className="font-normal">MAWS Architecture</h1>
 				<PDTClock />
 			</div>
-			<div className="flex gap-12">
+			<div className="flex gap-6">
 				{navItems.map((item) => (
 					<Link
 						key={item.href}

@@ -9,7 +9,7 @@ export default function AboutPage() {
 	return (
 		<>
 			<main>
-				<div className="grid max-w-2xl grid-cols-1 items-start gap-1">
+				<div className="grid grid-cols-1 items-start gap-1">
 					<div className="">
 						<p className="mb-4">
 							A licensed architect in California, Amaranta Morton is the founder
