@@ -5,7 +5,6 @@ import { useEffect } from "react";
 const colors = [
 	"#f3f1d9", // Crema
 	"#24e4a6", // Turquesa
-	"#2532b7", // Azul
 	"#fff115", // Amarillo
 	"#ffb6c1", // Rosa claro
 	"#ff002a", // Rojo
