@@ -12,7 +12,7 @@ export default function AboutPage() {
 				<div className="">
 					<p className="mb-4">
 						A licensed architect in California, Amaranta Morton is the founder
-						of MAWs Architecture, established in 2024. Based in Orange County,
+						of MAWS Architecture, established in 2024. Based in Orange County,
 						her firm offers a full spectrum of architectural services tailored
 						to meet your unique needs, from conceptualization to construction
 						documentation and administration. Additionally, her firm provides
@@ -39,7 +39,7 @@ export default function AboutPage() {
 					>
 						<div className="space-y-6">
 							<p>
-								Amaranta holds a Bachelor's of Architecture from the Southern
+								Amaranta holds a Bachelor’s of Architecture from the Southern
 								California Institute of Architecture. Her extensive background
 								includes commercial, civic, educational, institutional, and
 								residential projects. On every project, she has played a pivotal
@@ -50,7 +50,7 @@ export default function AboutPage() {
 							</p>
 
 							<p>
-								Before founding MAWs Architecture, Amaranta honed her expertise
+								Before founding MAWS Architecture, Amaranta honed her expertise
 								at renowned firms such as HELEO Architecture & Design in San
 								Diego, LPA Design Studios in Irvine, DLR Group in Los Angeles,
 								SPF Architects, and Morphosis Architects in Culver City.

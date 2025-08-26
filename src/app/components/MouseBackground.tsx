@@ -3,18 +3,12 @@
 import { useEffect } from "react";
 
 const colors = [
-	"#00afef", // Azul claro
-	"#fb00a9", // Rosa
 	"#f3f1d9", // Crema
-	"#4caf53", // Verde
-	"#ff002a", // Rojo
-	"#a940c2", // Morado
-	"#fff115", // Amarillo
-	"#2532b7", // Azul
 	"#24e4a6", // Turquesa
-	"#ff8c0f", // Naranja
+	"#2532b7", // Azul
+	"#fff115", // Amarillo
 	"#ffb6c1", // Rosa claro
-	"#0012ff", // Azul brillante
+	"#ff002a", // Rojo
 ];
 
 // Calculate luminance of a color to determine if text should be black or white
@@ -61,7 +55,7 @@ export default function MouseBackground() {
 
 			// Apply background and text color to body
 			document.body.style.backgroundColor = backgroundColor;
-			document.body.style.color = textColor;
+			// document.body.style.color = textColor;
 		};
 
 		// Add event listener

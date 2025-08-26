@@ -12,7 +12,7 @@ export default function ExperiencePage() {
 
 	return (
 		<main>
-			<div className="space-y-8">
+			<div className="space-y-4">
 				<p className="max-w-3xl">
 					Amaranta Morton has contributed to projects at different firms,
 					providing design and architectural support.
@@ -20,7 +20,7 @@ export default function ExperiencePage() {
 
 				<div className="space-y-1">
 					{projects.map((url, index) => (
-						<div key={index}>
+						<div key={url}>
 							<a
 								href={url}
 								target="_blank"
@@ -33,10 +33,8 @@ export default function ExperiencePage() {
 					))}
 				</div>
 
-				<div className="mt-12">
-					<p>
-						→ All projects remain the property of their respective firms.
-					</p>
+				<div className="mt-6">
+					<p>→ All projects remain the property of their respective firms.</p>
 				</div>
 			</div>
 		</main>

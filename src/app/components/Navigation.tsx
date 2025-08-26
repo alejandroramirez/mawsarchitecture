@@ -16,10 +16,8 @@ export default function Navigation() {
 
 	return (
 		<nav className="mb-6">
-			<div className="flex justify-between items-center mb-4">
-				<h1 className="font-normal">
-					MAWS Architecture
-				</h1>
+			<div className="mb-4 flex items-center justify-between">
+				<h1 className="font-normal">MAWS Architecture</h1>
 				<PDTClock />
 			</div>
 			<div className="flex gap-12">
@@ -27,9 +25,10 @@ export default function Navigation() {
 					<Link
 						key={item.href}
 						href={item.href}
-						className={pathname === item.href
-							? "opacity-100"
-							: "opacity-60 hover:opacity-80"
+						className={
+							pathname === item.href
+								? "opacity-100"
+								: "opacity-60 hover:opacity-80"
 						}
 					>
 						{item.label}

@@ -17,10 +17,10 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className="bg-white">
-				{/* <MouseBackground /> */}
+				<MouseBackground />
 				<div className="p-6">
 					<Navigation />
-					<div className="max-w-2xl">{children}</div>
+					<div className="max-w-4/12">{children}</div>
 				</div>
 			</body>
 		</html>
