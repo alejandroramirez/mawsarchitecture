@@ -7,7 +7,6 @@ const colors = [
 	"#24e4a6", // Turquesa
 	"#fff115", // Amarillo
 	"#ffb6c1", // Rosa claro
-	"#ff002a", // Rojo
 	"#ff8c0f", // Naranja
 	"#a940c2", // Púrpura
 ];
@@ -35,9 +34,18 @@ export default function MouseBackground() {
 			const { clientX, clientY } = event;
 			const { innerWidth, innerHeight } = window;
 
-			// Calculate grid position (4 columns x 3 rows = 12 colors)
-			const cols = 4;
-			const rows = 3;
+			const totalColors = colors.length;
+
+			// Calculate optimal grid layout based on number of colors
+			// Try to make a rectangle that's as close to square as possible
+			let cols = Math.ceil(Math.sqrt(totalColors));
+			let rows = Math.ceil(totalColors / cols);
+
+			// Adjust if we have too many empty spots
+			while (cols * rows - totalColors > cols && rows > 1) {
+				rows--;
+				cols = Math.ceil(totalColors / rows);
+			}
 
 			const colWidth = innerWidth / cols;
 			const rowHeight = innerHeight / rows;
@@ -51,7 +59,7 @@ export default function MouseBackground() {
 
 			// Calculate color index
 			const colorIndex = clampedRow * cols + clampedCol;
-			const backgroundColor = colors[colorIndex] ?? "#ffffff";
+			const backgroundColor = colors[colorIndex] ?? colors[0] ?? "#ffffff";
 			const textColor = getTextColorForBackground(backgroundColor);
 
 			// Apply background and text color to body
