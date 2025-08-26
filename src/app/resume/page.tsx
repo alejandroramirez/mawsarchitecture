@@ -81,7 +81,7 @@ export default function ResumePage() {
 			</div>
 			<div>
 				<a
-					href="/Amaranta Morton Résumé 2025.pdf"
+					href="/resume.pdf"
 					download="Amaranta Morton Résumé 2025.pdf"
 					className="mt-1 inline-block cursor-pointer transition-opacity hover:opacity-60"
 				>

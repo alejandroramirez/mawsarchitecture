@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function ContactPage() {
 	return (
-		<main className="flex min-h-dvh flex-col">
+		<main className="flex h-[calc(100dvh-130px)] flex-col justify-between">
 			<div className="space-y-1">
 				<p>Amaranta Morton</p>
 				<p>
@@ -20,15 +20,16 @@ export default function ContactPage() {
 				</p>
 			</div>
 
-			{/* Footer row pinned to bottom, side-by-side */}
-			<div className="mt-auto flex items-center justify-between pt-6">
+			{/* Footer row pinned to bottom */}
+			<div className="flex items-end">
 				<Image
 					src="/maws-logo.png"
 					alt="MAWS Architecture"
+					className="mr-2 inline-block"
 					width={160}
 					height={107}
 				/>
-				<p className="text-sm">©2025</p>
+				<p className="text-sm leading-2.5">©2025</p>
 			</div>
 		</main>
 	);

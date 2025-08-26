@@ -17,10 +17,10 @@ export default function AboutPage() {
 							her firm offers a full spectrum of architectural services tailored
 							to meet your unique needs, from conceptualization to construction
 							documentation and administration. Additionally, her firm provides
-							design development and permitting assistance. With over 17 years of
-							experience across diverse project typologies, she excels in guiding
-							projects from initial design phases through to completion, ensuring
-							excellence in every client engagement.
+							design development and permitting assistance. With over 17 years
+							of experience across diverse project typologies, she excels in
+							guiding projects from initial design phases through to completion,
+							ensuring excellence in every client engagement.
 						</p>
 
 						{!isExpanded && (
@@ -43,18 +43,20 @@ export default function AboutPage() {
 									Amaranta holds a Bachelor's of Architecture from the Southern
 									California Institute of Architecture. Her extensive background
 									includes commercial, civic, educational, institutional, and
-									residential projects. On every project, she has played a pivotal
-									role from early planning stages through final construction,
-									leveraging her skills in communication, organization,
-									interdisciplinary collaboration, and Building Information
-									Modeling (BIM) to lead project teams through all project phases.
+									residential projects. On every project, she has played a
+									pivotal role from early planning stages through final
+									construction, leveraging her skills in communication,
+									organization, interdisciplinary collaboration, and Building
+									Information Modeling (BIM) to lead project teams through all
+									project phases.
 								</p>
 
 								<p>
-									Before founding MAWS Architecture, Amaranta honed her expertise
-									at renowned firms such as HELEO Architecture & Design in San
-									Diego, LPA Design Studios in Irvine, DLR Group in Los Angeles,
-									SPF Architects, and Morphosis Architects in Culver City.
+									Before founding MAWS Architecture, Amaranta honed her
+									expertise at renowned firms such as HELEO Architecture &
+									Design in San Diego, LPA Design Studios in Irvine, DLR Group
+									in Los Angeles, SPF Architects, and Morphosis Architects in
+									Culver City.
 								</p>
 							</div>
 						</div>
@@ -74,18 +76,6 @@ export default function AboutPage() {
 					</div>
 				</div>
 			</main>
-
-			{/* Fixed copyright at bottom left */}
-			<div className="fixed bottom-6 left-6 flex items-end gap-2">
-				<Image
-					src="/architect-profile.png"
-					alt="MAWS Architecture"
-					width={160}
-					height={107}
-					className="h-auto"
-				/>
-				<p>©2025</p>
-			</div>
 		</>
 	);
 }
