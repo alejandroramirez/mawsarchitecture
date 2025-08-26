@@ -9,13 +9,23 @@ This is a Next.js project created with the T3 Stack (`create-t3-app`), which pro
 ## Development Commands
 
 - `pnpm dev` - Start development server with Turbo (recommended)
-- `pnpm build` - Build production version
-- `pnpm start` - Start production server
+- `pnpm build` - Build production version (dynamic Next.js app)
+- `pnpm build:static` - Build static export for hosting (outputs to `out/` directory)
+- `pnpm start` - Start production server (for dynamic build)
 - `pnpm preview` - Build and start production server locally
 - `pnpm typecheck` - Run TypeScript type checking
 - `pnpm check` - Run Biome linting and formatting checks
 - `pnpm check:write` - Run Biome with automatic fixes
 - `pnpm check:unsafe` - Run Biome with unsafe automatic fixes
+
+## Build Options
+
+This project supports two build modes:
+
+1. **Dynamic Build** (`pnpm build`): Standard Next.js app with server-side features
+2. **Static Export** (`pnpm build:static`): Static files for hosting on S3, Netlify, etc.
+
+For static hosting, use `pnpm build:static` and upload the contents of the `out/` directory.
 
 ## Package Manager
  
