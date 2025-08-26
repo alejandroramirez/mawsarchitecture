@@ -83,8 +83,8 @@ export default function ResumePage() {
 						</p>
 					</div>
 				</div>
-				<div className="relative w-3">
-					<div className="fixed mt-[calc(100dvh-50%)] ml-10">↓</div>
+				<div className="w-3">
+					<div className="fixed top-6/12 right-3">↓</div>
 				</div>
 			</div>
 			<div>
