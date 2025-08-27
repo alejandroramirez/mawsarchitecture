@@ -18,6 +18,16 @@ export default function ContactPage() {
 						t + 1 310 691 0409
 					</a>
 				</p>
+				<p>
+					<a
+						href="https://www.instagram.com/maws_architecture/"
+						target="_blank"
+						className="hover:opacity-60"
+						rel="noreferrer"
+					>
+						Follow: Instragram
+					</a>
+				</p>
 			</div>
 
 			{/* Footer row pinned to bottom */}
