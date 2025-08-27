@@ -15,8 +15,8 @@ export default function Navigation() {
 	];
 
 	return (
-		<nav className="mb-4">
-			<div className="mb-4 flex items-center justify-between">
+		<nav className="mb-3">
+			<div className="mb-3 flex items-center justify-between">
 				<h1 className="font-normal">
 					<Link href="/">MAWS Architecture</Link>
 				</h1>
