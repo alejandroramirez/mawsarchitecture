@@ -116,8 +116,8 @@ export default function ResumePage() {
 
 			{/* Dynamic scroll indicator */}
 			<div
-				className={`fixed bottom-6 right-6 lg:left-[564px] lg:right-auto text-lg transition-opacity duration-300 animate-bounce ${
-					showScrollIndicator ? "opacity-60" : "opacity-0 pointer-events-none"
+				className={`fixed right-4 bottom-6 animate-bounce text-lg transition-opacity duration-300 lg:right-auto lg:left-[564px] ${
+					showScrollIndicator ? "opacity-60" : "pointer-events-none opacity-0"
 				}`}
 			>
 				↓
