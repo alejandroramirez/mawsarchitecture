@@ -25,7 +25,7 @@ export default function ExperiencePage() {
 								href={url}
 								target="_blank"
 								rel="noopener noreferrer"
-								className="underline hover:opacity-60"
+								className="relative inline-block hover:opacity-60 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-current after:transition-all after:duration-300 hover:after:w-full"
 							>
 								{url}
 							</a>

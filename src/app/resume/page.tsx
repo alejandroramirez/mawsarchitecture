@@ -1,4 +1,33 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
 export default function ResumePage() {
+	const [showScrollIndicator, setShowScrollIndicator] = useState(false);
+
+	useEffect(() => {
+		const handleScroll = () => {
+			const scrollTop = window.scrollY;
+			const documentHeight = document.documentElement.scrollHeight;
+			const windowHeight = window.innerHeight;
+			const scrollableHeight = documentHeight - windowHeight;
+
+			// Show indicator if there's content to scroll (more than 50px remaining)
+			const hasMoreContent = scrollableHeight - scrollTop > 50;
+			setShowScrollIndicator(hasMoreContent && scrollableHeight > 0);
+		};
+
+		// Check on mount and scroll
+		handleScroll();
+		window.addEventListener("scroll", handleScroll);
+		window.addEventListener("resize", handleScroll);
+
+		return () => {
+			window.removeEventListener("scroll", handleScroll);
+			window.removeEventListener("resize", handleScroll);
+		};
+	}, []);
+
 	return (
 		<main>
 			<div className="flex">
@@ -83,9 +112,15 @@ export default function ResumePage() {
 						</p>
 					</div>
 				</div>
-				<div className="w-3">
-					<div className="relative top-4/12 right-0">↓</div>
-				</div>
+			</div>
+
+			{/* Dynamic scroll indicator */}
+			<div
+				className={`fixed bottom-6 right-6 text-lg transition-opacity duration-300 animate-bounce ${
+					showScrollIndicator ? "opacity-60" : "opacity-0 pointer-events-none"
+				}`}
+			>
+				↓
 			</div>
 			<div>
 				<a
