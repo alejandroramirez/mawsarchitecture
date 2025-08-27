@@ -32,13 +32,6 @@ export default function ContactPage() {
 
 			{/* Footer row pinned to bottom */}
 			<div className="flex items-end">
-				<Image
-					src="/maws-logo.png"
-					alt="MAWS Architecture"
-					className="mr-2 inline-block"
-					width={160}
-					height={107}
-				/>
 				<p className="text-sm leading-2.5">©2025</p>
 			</div>
 		</main>

@@ -55,14 +55,17 @@ export default function PDTClock() {
 		return {
 			timeString: `${displayHours}${showColon ? ":" : " "}${minutes} ${ampm}`,
 			dateString: `${month} ${day}, ${year} (PDT)`,
+			displayHours,
+			ampm,
 		};
 	};
 
-	const { timeString, dateString } = formatTime();
+	const { timeString, dateString, displayHours, ampm } = formatTime();
 
 	return (
 		<div className="text-right">
-			{timeString}–{dateString}
+			<span className="hidden sm:inline">{timeString}–{dateString}</span>
+			<span className="sm:hidden">{displayHours} {ampm} (PDT)</span>
 		</div>
 	);
 }

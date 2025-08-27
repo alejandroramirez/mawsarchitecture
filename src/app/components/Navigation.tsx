@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import PDTClock from "./PDTClock";
@@ -16,10 +17,26 @@ export default function Navigation() {
 
 	return (
 		<nav className="mb-4">
-			<div className="mb-4 flex items-center justify-between">
+			<div className="mb-2 flex items-start justify-between">
 				<h1 className="mr-4 font-normal">
-					<Link href="/">MAWS Architecture</Link>
+					<Link href="/">
+						<span className="sm:hidden">
+							MAWS
+							<br />
+							Architecture
+						</span>
+						<span className="hidden sm:inline">MAWS Architecture</span>
+					</Link>
 				</h1>
+				<div className="flex min-w-0 flex-1 justify-center">
+					<Image
+						src="/maws-logo.png"
+						alt="MAWS Architecture"
+						className="h-6 w-auto flex-shrink-0"
+						width={140}
+						height={107}
+					/>
+				</div>
 				<div className="ml-4">
 					<PDTClock />
 				</div>
