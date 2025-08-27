@@ -29,8 +29,8 @@ export default function Navigation() {
 						href={item.href}
 						className={
 							pathname === item.href
-								? "opacity-100"
-								: "opacity-60 hover:opacity-80"
+								? "opacity-100 underline decoration-1 underline-offset-4"
+								: "opacity-60 hover:opacity-80 hover:underline hover:decoration-1 hover:underline-offset-4"
 						}
 					>
 						{item.label}
