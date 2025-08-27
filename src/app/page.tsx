@@ -38,27 +38,23 @@ export default function AboutPage() {
 								isExpanded ? "opacity-100" : "max-h-0 opacity-0"
 							}`}
 						>
-							<div className="space-y-4">
-								<p>
-									Amaranta holds a Bachelor's of Architecture from the Southern
-									California Institute of Architecture. Her extensive background
-									includes commercial, civic, educational, institutional, and
-									residential projects. On every project, she has played a
-									pivotal role from early planning stages through final
-									construction, leveraging her skills in communication,
-									organization, interdisciplinary collaboration, and Building
-									Information Modeling (BIM) to lead project teams through all
-									project phases.
-								</p>
+							<p className="mb-4">
+								Amaranta holds a Bachelor's of Architecture from the Southern
+								California Institute of Architecture. Her extensive background
+								includes commercial, civic, educational, institutional, and
+								residential projects. On every project, she has played a pivotal
+								role from early planning stages through final construction,
+								leveraging her skills in communication, organization,
+								interdisciplinary collaboration, and Building Information
+								Modeling (BIM) to lead project teams through all project phases.
+							</p>
 
-								<p>
-									Before founding MAWS Architecture, Amaranta honed her
-									expertise at renowned firms such as HELEO Architecture &
-									Design in San Diego, LPA Design Studios in Irvine, DLR Group
-									in Los Angeles, SPF Architects, and Morphosis Architects in
-									Culver City.
-								</p>
-							</div>
+							<p className="mb-2">
+								Before founding MAWS Architecture, Amaranta honed her expertise
+								at renowned firms such as HELEO Architecture & Design in San
+								Diego, LPA Design Studios in Irvine, DLR Group in Los Angeles,
+								SPF Architects, and Morphosis Architects in Culver City.
+							</p>
 						</div>
 					</div>
 
