@@ -23,13 +23,29 @@ export default function PDTClock() {
 		};
 	}, []);
 
+	const isDaylightSaving = (date: Date) => {
+		const year = date.getFullYear();
+		// DST starts second Sunday in March
+		const dstStart = new Date(year, 2, 1); // March 1st
+		dstStart.setDate(dstStart.getDate() + (7 - dstStart.getDay()) + 7); // Second Sunday
+		// DST ends first Sunday in November  
+		const dstEnd = new Date(year, 10, 1); // November 1st
+		dstEnd.setDate(dstEnd.getDate() + (7 - dstEnd.getDay())); // First Sunday
+		
+		return date >= dstStart && date < dstEnd;
+	};
+
 	const formatTime = () => {
-		// Convert to PDT (UTC-7)
-		const pdtTime = new Date(time.getTime() - 7 * 60 * 60 * 1000);
+		const isDST = isDaylightSaving(time);
+		const offset = isDST ? 7 : 8; // PDT is UTC-7, PST is UTC-8
+		const timezone = isDST ? "PDT" : "PST";
+		
+		// Convert to Pacific time
+		const pacificTime = new Date(time.getTime() - offset * 60 * 60 * 1000);
 
 		// Format time (12-hour format)
-		const hours = pdtTime.getUTCHours();
-		const minutes = pdtTime.getUTCMinutes().toString().padStart(2, "0");
+		const hours = pacificTime.getUTCHours();
+		const minutes = pacificTime.getUTCMinutes().toString().padStart(2, "0");
 		const ampm = hours >= 12 ? "PM" : "AM";
 		const displayHours = hours % 12 || 12;
 
@@ -48,24 +64,30 @@ export default function PDTClock() {
 			"November",
 			"December",
 		];
-		const month = months[pdtTime.getUTCMonth()];
-		const day = pdtTime.getUTCDate();
-		const year = pdtTime.getUTCFullYear();
+		const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+		const dayOfWeek = days[pacificTime.getUTCDay()];
+		const month = months[pacificTime.getUTCMonth()];
+		const day = pacificTime.getUTCDate();
+		const year = pacificTime.getUTCFullYear();
 
 		return {
 			timeString: `${displayHours}${showColon ? ":" : " "}${minutes} ${ampm}`,
-			dateString: `${month} ${day}, ${year} (PDT)`,
+			dateString: `${dayOfWeek} ${month} ${day}, ${year} (${timezone})`,
 			displayHours,
 			ampm,
+			dayOfWeek,
+			minutes,
+			timezone,
 		};
 	};
 
-	const { timeString, dateString, displayHours, ampm } = formatTime();
+	const { timeString, dateString, displayHours, ampm, dayOfWeek, minutes, timezone } = formatTime();
 
 	return (
 		<div className="text-right">
-			<span className="hidden sm:inline">{timeString}–{dateString}</span>
-			<span className="sm:hidden">{displayHours} {ampm} (PDT)</span>
+			<span className="hidden min-[900px]:inline">{timeString}–{dateString}</span>
+			<span className="hidden min-[480px]:inline min-[900px]:hidden">{dayOfWeek} {timeString} ({timezone})</span>
+			<span className="min-[480px]:hidden">{displayHours}:{minutes.toString().padStart(2, "0")} {ampm} ({timezone})</span>
 		</div>
 	);
 }

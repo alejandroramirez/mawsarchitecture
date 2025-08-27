@@ -17,18 +17,20 @@ export default function Navigation() {
 
 	return (
 		<nav className="mb-4">
-			<div className="mb-2 flex items-start justify-between">
-				<h1 className="mr-4 font-normal">
-					<Link href="/">
-						<span className="sm:hidden">
-							MAWS
-							<br />
-							Architecture
-						</span>
-						<span className="hidden sm:inline">MAWS Architecture</span>
-					</Link>
-				</h1>
-				<div className="flex min-w-0 flex-1 justify-center">
+			<div className="mb-2 grid grid-cols-3 items-start">
+				<div className="flex justify-start">
+					<h1 className="font-normal">
+						<Link href="/">
+							<span className="sm:hidden">
+								MAWS
+								<br />
+								Architecture
+							</span>
+							<span className="hidden sm:inline">MAWS Architecture</span>
+						</Link>
+					</h1>
+				</div>
+				<div className="flex justify-center">
 					<Image
 						src="/maws-logo.png"
 						alt="MAWS Architecture"
@@ -37,7 +39,7 @@ export default function Navigation() {
 						height={107}
 					/>
 				</div>
-				<div className="ml-4">
+				<div className="flex justify-end">
 					<PDTClock />
 				</div>
 			</div>
